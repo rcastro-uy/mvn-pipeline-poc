@@ -10,6 +10,8 @@
       "url": "https"
     }
   ],
+  "hosts": "localhost:8081",
+  "basePath": "/orders",
   "paths": {
     "/orders": {
       "post": {
