@@ -1,0 +1,44 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Title",
+    "description": "Title",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https"
+    }
+  ],
+  "paths": {
+    "/orders": {
+      "post": {
+        "description": "Order Request: Recibe una nueva orden a ser generada en PayPal",
+        "parameters": [ {
+          "in": "body",
+          "name": "body",
+          "description": "Contiene el total de la orden",
+          "schema":{
+            "$ref": "#/definitions/OrderRequest"
+          }
+
+        } ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "OrderRequest": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "double"
+        }
+      }
+    }
+  }
+}
